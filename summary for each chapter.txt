@@ -1,0 +1,24 @@
+2_kNN k近邻算法
+每次预测都要计算整个trainMat。
+计算预测点到trainMat中所有点的距离，并对距离排序。在距离预测点最近的前k个点中，出现频率最高的label即为预测点的label。
+
+3_DecisionTree_ID3	决策树ID3算法
+香农熵越大，说明混合的数据越多。
+生成决策树时，计算trainMat中各项属性的香农熵。选择香农熵最小的那个属性对trainMat进行划分。
+该属性有多少属性值，就将trainMat其划分成多少份。将该属性作为树根，划分的subtrainMat用来迭代生成子树。
+当subtrainMat中的label一致或者再无属性可用于划分，则迭代停止。
+
+4_Naive Bayes 朴素贝叶斯
+首先构造词向量。
+在二分类中，词向量中每个词在该分类中出现的频率作为每一维的权重，此即p1Vector,p0Vector。
+该分类的词向量分别与p1Vector,p0Vector即为p(W|Ci).
+比较p(W|Ci)p(Ci),将积大的Ci作为预测文本的分类。
+
+5_Logistic Regression 逻辑回归
+对一个由(x,y)构成的数据集构造一个weight来表示一条直线。采用梯度上升的方法，调整weight寻找最优拟合直线。
+所谓梯度上升，就是计算label和由weight计算的predictlabel之差error，调整w，令w=w+alpha*dataMat[i]/dataMat.transpose()*error.
+
+
+
+
+
