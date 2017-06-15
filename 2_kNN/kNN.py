@@ -163,7 +163,7 @@ def img2vector(url):
 		for j in range(32):
 			vector[0,i*32+j]=int(line[j])
 	return vector
-vector=img2vector(r'D:\ADA\save\python\MachineLearninginAction\Ch02\recognize\trainingDigits\0_13.txt')
+vector=img2vector(r'D:\ADA\standardCodeAndSamples\MachineLearninginAction\Ch02\recognize\trainingDigits\0_13.txt')
 
 
 #测试kNN算法作用于手写识别上的错误率

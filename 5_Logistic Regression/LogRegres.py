@@ -94,13 +94,14 @@ def plotBestFit():
 	#绘制分割线	
 #	weight=gradeAscent(dataMat,labelMat)
 	weight=stocGradeAscent0(dataMat,labelMat)
-	x=arange(-3,3,0.1)		#arange(start,end,step)函数,返回一个array数组，数组元素再start到end之间(左闭→右边)，间隔为step
+	x=arange(-3,3,0.1)		#np.arange(start,end,step)函数,返回一个array数组，数组元素在start到end之间(左闭→右开)，间隔为step
+	#该句等价于x=linspace(-3,2.9,60)   np.linspace(start,end,num)函数,返回一个array数组，数组元素在start到end之间(左闭→右闭)，一共有num个数。
 	y=(-float(weight[0])-float(weight[1])*x)/float(weight[2])		
 #	y=(-weight[0]-weight[1]*x)/weight[2]		#元素代码会报错
 	ax.plot(x,y)
 	plt.show()
 	return
-#plotBestFit()	
+plotBestFit()	
 '''
 首先，ones([10])和ones([1,10])不一样
 print(ones(10))				#[ 1.  1.  1.  1.  1.  1.  1.  1.  1.  1.]

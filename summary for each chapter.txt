@@ -1,4 +1,4 @@
-2_kNN k近邻算法
+﻿2_kNN k近邻算法
 每次预测都要计算整个trainMat。
 计算预测点到trainMat中所有点的距离，并对距离排序。在距离预测点最近的前k个点中，出现频率最高的label即为预测点的label。
 
@@ -16,7 +16,7 @@
 
 5_Logistic Regression 逻辑回归
 对一个由(x,y)构成的数据集构造一个weight来表示一条直线。采用梯度上升的方法，调整weight寻找最优拟合直线。
-所谓梯度上升，就是计算label和由weight计算的predictlabel之差error，调整w，令w=w+alpha*dataMat[i]/dataMat.transpose()*error.
+所谓梯度上升，就是计算label和由weight计算的predictlabel之差error，调整w，令w=w+alpha*dataMat[i]（随机梯度上升）/dataMat.transpose()（梯度上升）*error.
 
 
 
